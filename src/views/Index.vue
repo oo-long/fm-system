@@ -1,12 +1,17 @@
 <template>
   <div class="index">
-    初始化页面试试
+    <HeadNav>
+      <router-view></router-view>
+    </HeadNav>
   </div>
 </template>
 
 <script>
+  import HeadNav from '../components/HeadNav'
   export default{
     name: "index",
-    components: {}
+    components: {
+      HeadNav
+    }
   }
 </script>
