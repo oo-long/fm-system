@@ -4,7 +4,7 @@
       <div class="manage_tip">
         <span class="title">在线后台管理系统</span>
         <el-form :model="registerUser" :rules="rules" ref="registerForm"
-        label-width="100px" class="registerForm">
+        label-width="90px" class="registerForm">
           <el-form-item label="用户名" prop="name">
             <el-input v-model="registerUser.name" placeholder="请输入用户名">
             </el-input>
@@ -21,7 +21,7 @@
             <el-input type="password" v-model="registerUser.confirmPassword" placeholder="请再次输入密码">
             </el-input>
           </el-form-item>
-          <el-form-item label="选择省份">
+          <el-form-item label="选择身份">
             <el-select v-model="registerUser.identity" placeholder="请选择身份">
               <el-option label="管理员" value="manager"></el-option>
               <el-option label="员工" value="employee"></el-option>
@@ -111,9 +111,36 @@
       submitForm(formName){
         this.$refs[formName].validate(valid => {
           if(valid){
-            alert('SUBMIT!');
+            this.$axios.post("/api/users/register",this.registerUser)
+            .then(res => {
+              // 注册成功
+              this.$message({
+                message: "账号注册成功!",
+                type: 'success'
+              });
+              setTimeout(()=>{
+                this.$router.push('/login');
+              },600)
+            }).catch(err => {
+              // if(err.response.status == 400){
+              // this.$message({
+              //   message: "该账号已注册，请直接登录",
+              //   type: 'warning'
+              // });
+              // setTimeout(()=>{
+              //   this.$router.push('/login');
+              // },600);
+              // return false
+              // }
+              
+              // 注册失败
+              this.$message({
+                message: "网络错误，请稍后重试",
+                type: 'error'
+              })
+            })
+            
           }else{
-            console.log("error submit");
             return false;
           }
         })
@@ -136,7 +163,7 @@
   position: absolute;
   top: 10%;
   left: 50%;
-  margin-left: -185px;
+  margin-left: -210px;
   padding: 25px;
   border-radius: 5px;
   text-align: center;
