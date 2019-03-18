@@ -1,17 +1,37 @@
 <template>
   <div class="index">
-    <HeadNav>
+    <HeadNav></HeadNav>
+    <LeftMenu></LeftMenu>
+    <div class="right-cotanier">
       <router-view></router-view>
-    </HeadNav>
+    </div>
   </div>
 </template>
 
 <script>
   import HeadNav from '../components/HeadNav'
+  import LeftMenu from '../components/LeftMenu'
   export default{
     name: "index",
     components: {
-      HeadNav
+      HeadNav,
+      LeftMenu
     }
   }
 </script>
+
+<style>
+.index{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.right-cotanier{
+  position: relative;
+  top: 0;
+  left: 180px;
+  width: calc(100% - 180px);
+  height: calc(100% - 51px);
+  overflow: auto;
+}
+</style>

@@ -7,13 +7,6 @@
   </div>  
 </template>
 
-// <script>
-// export default {
-//   name: 'home',
-//   components: {}
-// }
-// </script>
-
 
 <style scoped>
   .home{
@@ -26,6 +19,16 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding-top: 100px;
+    padding-top: 180px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    color: #fff
+  }
+  .title{
+    font-size: 30px;
+  }
+  .lead{
+    margin-top: 50px;
+    font-size: 22px;
   }
 </style>

@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="6" class="logo-container">
         <img src="../assets/logo.png" class="logo" alt="">
-        <span class="title">在线后台管理系统</span>
+        <span class="title">在线资金管理系统</span>
       </el-col>
       <el-col :span="6" class="user">
         <div class="userinfo">
@@ -43,15 +43,15 @@ export default {
     setDialogInfo(commandItem){
       switch(commandItem){
         case "info": 
-          this.showInfoList();
+          this.showProfile();
           break;
         case "logout":
           this.logout();
           break;
       }
     },
-    showInfoList(){
-      console.log("个人信息")
+    showProfile(){
+      this.$router.push("/profile")
     },
     logout(){
       // 清除token
@@ -80,8 +80,8 @@ export default {
   min-width: 400px;
 }
 .logo{
-  height: 26px;
-  width: 26px;
+  height: 20px;
+  width: 20px;
   margin-left: 15px;
   margin-right: 10px;
   vertical-align: middle;
