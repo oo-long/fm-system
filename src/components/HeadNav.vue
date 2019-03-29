@@ -2,7 +2,6 @@
   <header class="head-nav">
     <el-row>
       <el-col :span="6" class="logo-container">
-        <img src="../assets/logo.png" class="logo" alt="">
         <span class="title">在线资金管理系统</span>
       </el-col>
       <el-col :span="6" class="user">
@@ -71,9 +70,9 @@ export default {
   height: 40px;
   min-width: 600px;
   padding: 5px;
-  background: #324057;
+  background: #1A1E29;
   color: #fff;
-  border-bottom:  1px solid #1f2d3d;
+  border-bottom:  1px solid #191C21
 }
 .logo-container{
   line-height: 40px;
@@ -91,6 +90,7 @@ export default {
   vertical-align: middle;
   font-size: 16px;
   letter-spacing: 2px;
+  padding-left: 1em;
 }
 .user{
   line-height: 40px;
@@ -121,7 +121,7 @@ export default {
   font-size: 12px;
 }
 .avatarname{
-  color: #409eff;
+  color: #7984F3;
   font-weight: bolder;
 }
 .username{

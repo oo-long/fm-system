@@ -3,9 +3,9 @@
     <el-col>
       <el-menu
         class="el-menu-vertical-demo"
-        background-color="#324057"
+        background-color="#1A1E29"
         text-color="#fff"
-        active-text-color="#409eff">
+        active-text-color="#7984F3">
         <router-link to="/home">
           <el-menu-item index="0">
             <i class="fa fa-margin fa-server"></i>
@@ -75,7 +75,7 @@ export default {
   top: 51px;
   left: 0;
   min-height: 100%;
-  background-color: #324057;
+  background-color: #1A1E29;
   z-index: 99;
 }
 .el-menu{

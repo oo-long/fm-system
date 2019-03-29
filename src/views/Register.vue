@@ -33,6 +33,19 @@
         </el-form>
       </div>
     </section>
+    <div class="text">
+      <div>JSFU<b class="pink">N</b></div><div class="indent1">.CL<b class="purple">U</b>B</div>
+    </div>  
+    <div class="font">
+      <span class="fs-11">FONT</span>
+      <span class="fs-28">Montserrat</span>
+    </div>
+    <div class="cool">
+      MR.EF
+    </div>
+    <div class="name">
+      JSFUN.CLUB
+    </div>
   </div>
 </template>
 
@@ -120,7 +133,7 @@
               });
               setTimeout(()=>{
                 this.$router.push('/login');
-              },600)
+              },300)
             }).catch(err => {
               // if(err.response.status == 400){
               // this.$message({
@@ -149,7 +162,7 @@
   }
 </script>
 
-<style scoped>
+<style>
 .register{
   position: relative;
   width: 100%;
@@ -157,31 +170,94 @@
   background: url(../assets/bg.jpg) no-repeat center center;
   background-size: 100% 100%;
 }
-.form_container{
+.register .form_container{
   width: 370px;
   height: 210px;
   position: absolute;
-  top: 10%;
-  left: 50%;
-  margin-left: -210px;
-  padding: 25px;
+  top: 21%;
+  right: 19%;
   border-radius: 5px;
   text-align: center;
+  z-index: 99;
 }
 .form_container .manage_tip .title{
-  font-weight: bold;
-  font-size: 26px;
+  font-size: 20px;
   color: #fff;
+  letter-spacing: 1px
 }
-.registerForm{
-  margin-top: 20px;
-  background-color: #fff;
+.register .registerForm{
+  margin-top: 21px;
+  background-color: rgba(255,255,255,.1);
   padding: 20px 40px 20px 20px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px #ccc
 }
-.submit_btn{
+.register .submit_btn{
+  width: 100%;
+  background-color: #7984F3;
+  border-color: #7984F3;
+}
+.register .submit_btn{
   width: 100%;
 }
-
+.registerForm label.el-form-item__label{
+  color: #838DA1;
+}
+.register .text{
+  position: absolute;
+  top: 33%;
+  left: 19%;
+  color: #fff;
+  font-size: 115px;
+  font-family: "montserratalternates-regular";
+  line-height: normal;
+}
+.register .pink{
+  font-weight: normal;
+  color: #F27D91
+}
+.register .purple{
+  font-weight: normal;
+  color: #7984F3
+}
+.register .indent1{
+  text-indent: 1em;
+}
+.register .font{
+  position: absolute;
+  left: 17%;
+  bottom: 7%;
+  color: #fff;
+  font-family: "montserrat-regular";
+  line-height: normal;
+}
+.register .fs-11{
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #838DA1
+}
+.register .fs-28{
+  font-size: 28px;
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+.register .cool{
+  position: absolute;
+  right: 17%;
+  bottom: 7%;
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-family: "montserratalternates-regular";
+  line-height: normal;
+}
+.register .name{
+  position: absolute;
+  right: 17%;
+  top: 7%;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "montserrat-light";
+  line-height: normal;
+}
 </style>

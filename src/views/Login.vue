@@ -22,6 +22,19 @@
         </el-form>
       </div>
     </section>
+    <div class="text">
+      <div>JSFU<b class="pink">N</b></div><div class="indent1">.CL<b class="purple">U</b>B</div>
+    </div>  
+    <div class="font">
+      <span class="fs-11">FONT</span>
+      <span class="fs-28">Montserrat</span>
+    </div>
+    <div class="cool">
+      MR.EF
+    </div>
+    <div class="name">
+      JSFUN.CLUB
+    </div>
   </div>
 </template>
 <script>
@@ -82,7 +95,7 @@ export default {
             this.$store.dispatch("setUser",decoded)
             setTimeout(()=>{
               this.$router.push('/index')
-            },600)
+            },300)
           })
           .catch(error=>{
             if(error.response.status){
@@ -115,7 +128,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .login{
   position: relative;
   width: 100%;
@@ -123,38 +136,103 @@ export default {
   background: url(../assets/bg.jpg) no-repeat center center;
   background-size: 100% 100% 
 }
-.form_container{
+.login .form_container{
   width: 370px;
   height: 210px;
   position: absolute;
-  top: 20%;
-  left: 50%;
-  padding: 25px;
-  margin-left: -210px;
+  top: 30%;
+  right: 19%;
+  /* padding: 25px; */
+  /* margin-left: -210px; */
   border-radius: 5px;
   text-align: center;
+  z-index: 99;
 }
 .form_container .manage_tip .title{
-  font-weight: bold;
-  font-size: 26px;
+  /* font-weight: bold; */
+  font-size: 20px;
   color: #fff;
+  letter-spacing: 1px
 }
-.loginForm{
-  margin-top: 20px;
-  background-color: #fff;
-  padding: 20px 40px 20px 20px;
+.login .loginForm{
+  margin-top: 21px;
+  background-color: rgba(255,255,255,.1);
+  padding: 20px 40px 20px 0;
   border-radius: 5px;
-  box-shadow: 0 5px 10px #ccc;
 }
-.submit_btn{
+.login .submit_btn{
   width: 100%;
+  background-color: #7984F3;
+  border-color: #7984F3;
 }
-.tiparea{
+.login .tiparea{
   text-align: right;
   font-size: 12px;
-  color: #333
+  color: #838DA1
 }
-.tiparea p a{
-  color: #409eff
+.login .tiparea p a{
+  color: #7984F3;
+  text-decoration: none;
+}
+.loginForm label.el-form-item__label{
+  color: #838DA1;
+}
+.login .text{
+  position: absolute;
+  top: 33%;
+  left: 19%;
+  color: #fff;
+  font-size: 115px;
+  font-family: "montserratalternates-regular";
+  line-height: normal;
+}
+.login .pink{
+  font-weight: normal;
+  color: #F27D91
+}
+.login .purple{
+  font-weight: normal;
+  color: #7984F3
+}
+.login .indent1{
+  text-indent: 1em;
+}
+.login .font{
+  position: absolute;
+  left: 17%;
+  bottom: 7%;
+  color: #fff;
+  font-family: "montserrat-regular";
+  line-height: normal;
+}
+.login .fs-11{
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #838DA1
+}
+.login .fs-28{
+  font-size: 28px;
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+.login .cool{
+  position: absolute;
+  right: 17%;
+  bottom: 7%;
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-family: "montserratalternates-regular";
+  line-height: normal;
+}
+.login .name{
+  position: absolute;
+  right: 17%;
+  top: 7%;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "montserrat-light";
+  line-height: normal;
 }
 </style>

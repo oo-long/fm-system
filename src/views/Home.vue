@@ -12,15 +12,14 @@
   .home{
     width: 100%;
     height: 100%;
-    background: url(../assets/showcase.png) no-repeat;
-    background-size: 100% 100%;
+    background: url(../assets/showcase.png) center center;
   }
   .container{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     padding-top: 180px;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .4);
     text-align: center;
     color: #fff
   }

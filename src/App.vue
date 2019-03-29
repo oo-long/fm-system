@@ -6,6 +6,7 @@
 
 <script>
 import jwt_decode from 'jwt-decode';
+import './assets/css/font.css';
 export default {
   name: 'app',
   components: {},
