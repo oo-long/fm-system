@@ -1,4 +1,4 @@
-# client
+# 👽👽financial management web app created by Vue👽👽
 
 ## Project setup
 ```
