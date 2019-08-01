@@ -1,4 +1,4 @@
-# 👽👽financial management web app created by Vue👽👽
+👽financial management web app created by Vue👽
 
 ## Project setup
 ```
